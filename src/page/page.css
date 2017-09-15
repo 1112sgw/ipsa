@@ -1,0 +1,67 @@
+.main-qa{
+  max-width: 720px;
+  margin: 0 auto;
+  width: 90%;
+  color:#fff ;
+  position: relative;
+  z-index: 999;
+}
+
+.main-qa .background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: -1;
+}
+.morph {
+  position: relative;
+  height: 100%;
+  fill: var(--background-color-2);
+  flex: none;
+}
+
+.header{
+  float: left;
+  width: 100%;
+}
+
+.processbar {
+  float: right;
+}
+.processbar span{
+  display: inline-block;
+  margin-right: 1px;
+  width: 16px;
+  background: #ddd;
+  text-indent: 100%;
+  vertical-align: top;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 5px;
+}
+.processbar .solid{
+  background: #00299f;
+}
+
+.main-answer{
+  margin-top: 30px;
+}
+.main-answer label{
+  color:#fff !important;
+  font-weight: bold;
+}
+.skinImg {
+  width: 50%;
+  float: left;
+}
+.typeImg {
+  width: 50%;
+  float: left;
+}

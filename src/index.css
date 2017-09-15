@@ -1,0 +1,32 @@
+*{
+  /* opacity: 1; */
+  -webkit-backface-visibility: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #00299f;
+  color:#fff;
+}
+.svg-filters {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+body:not(.iOS) #lines * {
+  mix-blend-mode: lighten;
+}
+
+#fills * {
+  opacity: 0;
+  mix-blend-mode: lighten;
+}
+
+.fireworks{
+  position: absolute;
+  left: 0;
+  top: 0
+}
