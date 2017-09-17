@@ -32,7 +32,24 @@ class MainQA extends Component {
 
       let lastid = _.last(an).q;
       id = lastid + 1;
-
+      if (lastid === 1) {
+        switch (this.findAnByQuestionId(an, 1)) {
+          case 1:
+          case 2:
+            this.setState({ productType: 1 });
+            break;
+          case 3:
+            this.setState({ productType: 2 });
+            break;
+          case 3:
+          case 4:
+          case 5:
+            this.setState({ productType: 3 });
+            break;
+          default:
+            break;
+        }
+      }
       if (lastid === 4) {
         if (this.findAnByQuestionId(an, 3) === 1) {
           this.setState({ status: 'finished', resultId: 0 });
@@ -51,13 +68,19 @@ class MainQA extends Component {
             this.setState({ productType: 1 });
             break;
           case 2:
-            this.setState({ productType: 2 });
+            if (this.state.type === 1) {
+              this.setState({ productType: 2 });
+            }
             break;
           case 3:
-            this.setState({ productType: 3 });
+            if (this.state.type === 1 || this.state.type === 2) {
+              this.setState({ productType: 3 });
+            }
             break;
           case 4:
-            this.setState({ productType: 4 });
+            if (this.state.type === 1 || this.state.type === 2 || this.state.type === 3) {
+              this.setState({ productType: 4 });
+            }
             break;
           default:
             break;
@@ -255,9 +278,9 @@ class MainQA extends Component {
 
   handleProduct = () => {
 
-    let product = _.result(_.find(productlist, { 'id': this.state.productType}), 'option');
-    return _.find(product, { 'id': this.state.productNum});
-  
+    let product = _.result(_.find(productlist, { 'id': this.state.productType }), 'option');
+    return _.find(product, { 'id': this.state.productNum });
+
   }
 
   theMainStage = () => {
