@@ -20,8 +20,8 @@ class MainPage extends Component {
   render() {
     return (    
       <div className="main">
-        {<Landing />}
-        {/* <MainQA /> */}
+        {/* {<Landing />} */}
+        {<MainQA />}
         <CanvasShow />
       </div>
     );

@@ -94,8 +94,9 @@ class Question extends Component {
 		return (
 			<div className="main-quiz">
 				<h3 className="main-question">
-					{this.props.num + "." + this.state.items.question}
+					{this.props.num + "." + this.state.items.question }
 				</h3>
+				<p>{this.state.items.des}</p>
 				<div className="main-answer">
 				<VelocityTransitionGroup enter={enterAnimation} leave={{animation: "slideUp"}}>
 						{
