@@ -87,11 +87,15 @@ class MainQA extends Component {
       }
       if (lastid === 51) {
         if (this.findAnByQuestionId(an, 51) === 1) {
-          this.setState({ productType: 4, productNum: 1, status: 'finished', resultId: this.findResultId() });
+          this.setState({ productType: 4, productNum: 1, status: 'finished' }, () => {
+            this.setState({ resultId: this.findResultId() });
+          });
         } else {
-          this.setState({ productType: 4, productNum: 2, status: 'finished', resultId: this.findResultId() });
+          this.setState({ productType: 4, productNum: 2, status: 'finished' }, () => {
+            this.setState({ resultId: this.findResultId() });
+          });
         }
-       return [];
+        return [];
       }
       if (lastid === 6) {
         if (an[5].a === 3) {
@@ -232,10 +236,13 @@ class MainQA extends Component {
       if (lastid === 13) {
         if (this.findAnByQuestionId(an, 13) === 1) {
           if (this.state.productType === 1) {
-            this.setState({ productType: 2 });
+            this.setState({ productType: 2 }, ()=>{
+              this.setState({ status: 'finished', resultId: this.findResultId() });
+            });
           }
+        }else{
+          this.setState({ status: 'finished', resultId: this.findResultId() });
         }
-        this.setState({ status: 'finished', resultId: this.findResultId() });
         return [];
       }
     }
@@ -261,8 +268,8 @@ class MainQA extends Component {
   };
 
   findResultId = () => {
-    var type = this.state.productType;
-    var num = this.state.productNum;
+    let type = this.state.productType;
+    let num = this.state.productNum;
     if (type === 1 || type === 2 || type === 3) {
       switch (num) {
         case 1:
