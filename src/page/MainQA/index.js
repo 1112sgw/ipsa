@@ -15,8 +15,8 @@ class MainQA extends Component {
   state = {
     status: 'question',
     resultId: 1,
-    productType: '',
-    productNum: '',
+    productType: 0,
+    productNum: 0,
     num: 0,
     pos: 0,
     DOM: {},
@@ -26,7 +26,6 @@ class MainQA extends Component {
     let id = 1;
     let numold = this.state.num;
 
-    //
     //handle result
     if (an.length > 0) {
 
@@ -87,11 +86,12 @@ class MainQA extends Component {
         }
       }
       if (lastid === 51) {
-        if (an[4].a === 1) {
-          this.setState({ status: 'finished', product: 'MESE1', resultId: 5 });
+        if (this.findAnByQuestionId(an, 51) === 1) {
+          this.setState({ productType: 4, productNum: 1, status: 'finished', resultId: this.findResultId() });
         } else {
-          this.setState({ status: 'finished', product: 'MESE2', resultId: 6 });
+          this.setState({ productType: 4, productNum: 2, status: 'finished', resultId: this.findResultId() });
         }
+       return [];
       }
       if (lastid === 6) {
         if (an[5].a === 3) {
@@ -99,6 +99,13 @@ class MainQA extends Component {
         }
       }
       if (lastid === 7) {
+        if (this.state.productType === 4) {
+          if (this.findAnByQuestionId(an, 7) === 1) {
+            this.setState({ productNum: 2 });
+          } else {
+            this.setState({ productNum: 1 });
+          }
+        }
       }
       if (lastid === 71) {
         id = 81;
@@ -170,6 +177,7 @@ class MainQA extends Component {
             if (this.state.productType === 1) {
               this.setState({ productType: 2 });
             }
+            break;
           default:
             id = 11;
             break;
@@ -246,42 +254,72 @@ class MainQA extends Component {
     return _.find(qalist, (qa) => {
       return qa.id === id;
     })
-  }
+  };
 
   findAnByQuestionId = (anlist, id) => {
     return _.result(_.find(anlist, { 'q': id }), 'a');
-  }
+  };
 
   findResultId = () => {
     var type = this.state.productType;
     var num = this.state.productNum;
-    if (num === 1) {
-      return 1;
-    } else if (num === 2) {
-      return 2;
-    } else if (num === 3) {
-      if (type === 5) {
-        return 4;
-      } else {
-        return 3;
+    if (type === 1 || type === 2 || type === 3) {
+      switch (num) {
+        case 1:
+          return 1;
+          break;
+        case 2:
+          return 2;
+          break;
+        case 3:
+          return 3;
+          break;
+        case 4:
+          return 4;
+          break;
+        default:
+          break;
       }
-    } else if (num === 4 && type !== 5) {
-      return 4;
+    } else if (type === 4) {
+      switch (num) {
+        case 1:
+          return 5;
+          break;
+        case 2:
+          return 6;
+          break;
+        default:
+          break;
+      }
+    } else if (type === 5) {
+      switch (num) {
+        case 1:
+          return 1;
+          break;
+        case 2:
+          return 2;
+          break;
+        case 3:
+          return 4;
+          break;
+        default:
+          break;
+      }
     }
-  }
+  };
 
   handleResult = () => {
     return _.find(resultlist, (result) => {
       return result.id === this.state.resultId;
     });
-  }
+  };
 
   handleProduct = () => {
 
     let product = _.result(_.find(productlist, { 'id': this.state.productType }), 'option');
     return _.find(product, { 'id': this.state.productNum });
 
-  }
+  };
 
   theMainStage = () => {
 
@@ -291,7 +329,7 @@ class MainQA extends Component {
     else {
       return <Result result={() => this.handleResult()} product={() => this.handleProduct()} />
     }
-  }
+  };
 
   handleProcessBar = () => {
     let bar = `<span class="solid"></span>`;
@@ -303,7 +341,7 @@ class MainQA extends Component {
       bar = bar + `<span class="empty"></span>`
     }
     return bar;
-  }
+  };
 
   initShapeLoop = (pos, DOM) => {
     anime.remove(DOM.shapeEl);
@@ -344,7 +382,7 @@ class MainQA extends Component {
     DOM.shapeEl = DOM.svg.querySelector('path');
     this.setState({ pos: 0, DOM: DOM })
     this.initShapeEl(this.state.DOM)
-  }
+  };
 
   render() {
     return (
