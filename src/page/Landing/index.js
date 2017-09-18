@@ -168,6 +168,76 @@ class Landing extends Component {
               <path d="M557.163,741.785c-15.163,0-27.5-12.563-27.5-28c0-15.439,12.337-28,27.5-28s27.5,12.561,27.5,28 C584.663,729.224,572.326,741.785,557.163,741.785z" className="ipsa-point-s"/>
               <path d="M631.424,740.259c-15.163,0-27.5-12.561-27.5-28c0-15.438,12.337-28,27.5-28s27.5,12.562,27.5,28 C658.924,727.698,646.587,740.259,631.424,740.259z" className="ipsa-point-a"/>
             </g>
+            <g id="suggest">
+              <g>
+                <circle fill="#FFFFFF" cx="343.232" cy="68.156" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_b1.png"  transform="matrix(0.4421 0 0 0.4421 287.9614 10.8745)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="487.951" cy="70.165" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_b3.png"  transform="matrix(0.4383 0 0 0.4467 434.6846 14.8906)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="634.679" cy="70.165" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_s1.png"  transform="matrix(0.4461 0 0 0.4461 578.3984 16.8984)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="779.396" cy="70.165" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_ex1.png"  transform="matrix(0.4461 0 0 0.4461 723.1182 16.8984)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="415.589" cy="210.865" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_ex2.png"  transform="matrix(0.4461 0 0 0.4461 359.311 159.6069)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="704.023" cy="210.865" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_r1.png"  transform="matrix(0.4461 0 0 0.4461 649.7529 155.5894)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="623.624" cy="349.049" r="64.321"/>
+                <image overflow="visible" width="250" height="250" href="image/me_r2.png"  transform="matrix(0.4502 0 0 0.4502 565.3359 293.7773)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="632.669" cy="494.773" r="64.321"/>
+                <image overflow="visible" width="250" height="250" href="image/me_s2.png"  transform="matrix(0.426 0 0 0.426 580.4092 442.5107)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="341.225" cy="495.776" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_r2.png"  transform="matrix(0.4502 0 0 0.4502 282.9341 440.5039)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="196.505" cy="494.773" r="64.321"/>
+                <image overflow="visible" width="250" height="250" href="image/me_r2.png"  transform="matrix(0.4502 0 0 0.4502 138.2188 439.499)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="487.951" cy="493.77" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_s2.png"  transform="matrix(0.426 0 0 0.426 435.689 441.5049)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="777.39" cy="492.764" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_s2.png"  transform="matrix(0.426 0 0 0.426 725.1299 440.499)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="560.31" cy="208.854" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_ex2.png"  transform="matrix(0.4461 0 0 0.4461 504.0273 157.6006)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="482.924" cy="351.058" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_ex2.png"  transform="matrix(0.4461 0 0 0.4461 426.6436 299.8027)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="270.874" cy="211.868" r="64.321"/>
+                <image overflow="visible" width="250" height="250" href="image/me_se1.png"  transform="matrix(0.4421 0 0 0.4421 214.5991 158.606)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="341.225" cy="351.058" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_se1.png"  transform="matrix(0.4421 0 0 0.4421 284.9482 297.7969)"></image>
+              </g>
+              <g>
+                <circle fill="#FFFFFF" cx="198.514" cy="68.156" r="64.32"/>
+                <image overflow="visible" width="250" height="250" href="image/me_b1.png"  transform="matrix(0.4421 0 0 0.4421 143.2451 10.8745)"></image>
+              </g>
+            </g>
           </g>
          
         </svg>
