@@ -65,3 +65,17 @@
   width: 50%;
   float: left;
 }
+
+.gotoqa{
+  width: 200px;
+  margin: 80px auto;
+  display: block;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 40px;
+  line-height: 40px;
+  border: 1.5px solid #fff;
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+}

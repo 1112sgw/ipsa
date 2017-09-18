@@ -373,8 +373,8 @@ class MainQA extends Component {
       duration: shapes[this.state.pos].animation.svg.duration,
       easing: shapes[this.state.pos].animation.svg.easing,
       elasticity: shapes[this.state.pos].animation.svg.elasticity || 0,
-      scaleX: shapes[this.state.pos].scaleX,
-      scaleY: shapes[this.state.pos].scaleY,
+      scaleX: shapes[this.state.pos].scaleX / 2,
+      scaleY: shapes[this.state.pos].scaleY / 2,
       translateX: shapes[this.state.pos].tx + 'px',
       translateY: shapes[this.state.pos].ty + 'px',
       rotate: shapes[this.state.pos].rotate + 'deg'
