@@ -20,6 +20,12 @@ body:not(.iOS) #lines * {
   mix-blend-mode: lighten;
 }
 
+#logo {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
 #fills * {
   opacity: 0;
   mix-blend-mode: lighten;
@@ -28,5 +34,6 @@ body:not(.iOS) #lines * {
 .fireworks{
   position: absolute;
   left: 0;
-  top: 0
+  top: 0;
+  z-index: -1
 }
