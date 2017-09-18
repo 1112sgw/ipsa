@@ -13,7 +13,7 @@ class Result extends Component {
 			return (
 				<div className="main-reuslt">
 					<div className="title">
-						<p>先天的肤质与生俱来的肌肤特质</p>
+						<p>{`先天的肤质<与生俱来的肌肤特质>`}</p>
 						<h2>目前您的素肌类型</h2>
 					</div>
 					<div className="type">
@@ -42,7 +42,7 @@ class Result extends Component {
 						}
 					</div>
 					<div className="afterDes">
-						<h4>后天的肌肤状态说明</h4>
+						<h4>{`后天的肌肤状态说明<至今积累的肌肤受到的影响>`}</h4>
 						{
 							this.props.result().beforeDes.map((d)=> {
 								return <p key={d}>{d}</p>

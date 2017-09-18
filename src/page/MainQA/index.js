@@ -67,17 +67,17 @@ class MainQA extends Component {
             this.setState({ productType: 1 });
             break;
           case 2:
-            if (this.state.type === 1) {
+            if (this.state.productType === 1) {
               this.setState({ productType: 2 });
             }
             break;
           case 3:
-            if (this.state.type === 1 || this.state.type === 2) {
+            if (this.state.productType === 1 || this.state.productType === 2) {
               this.setState({ productType: 3 });
             }
             break;
           case 4:
-            if (this.state.type === 1 || this.state.type === 2 || this.state.type === 3) {
+            if (this.state.productType === 1 || this.state.productType === 2 || this.state.productType === 3) {
               this.setState({ productType: 4 });
             }
             break;
@@ -237,12 +237,11 @@ class MainQA extends Component {
         if (this.findAnByQuestionId(an, 13) === 1) {
           if (this.state.productType === 1) {
             this.setState({ productType: 2 }, ()=>{
-              this.setState({ status: 'finished', resultId: this.findResultId() });
+              this.setState({resultId: this.findResultId()});
             });
           }
-        }else{
-          this.setState({ status: 'finished', resultId: this.findResultId() });
         }
+        this.setState({ status: 'finished', resultId: this.findResultId() });
         return [];
       }
     }
@@ -331,6 +330,7 @@ class MainQA extends Component {
   theMainStage = () => {
 
     if (this.state.status === "question") {
+      console.log("productType:"+this.state.productType,"productNum:"+this.state.productNum);
       return <Question question={(an) => this.handleQuestion(an)} num={this.state.num} />
     }
     else {
