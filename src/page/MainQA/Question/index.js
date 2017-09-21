@@ -101,7 +101,7 @@ class Question extends Component {
 				<VelocityTransitionGroup enter={enterAnimation} leave={{animation: "slideUp"}}>
 						{
 							this.state.items !== '' ? this.state.items.option.map((op)=> {
-								return <div key={this.state.items.id*10 + op.id} onClick={()=> this.questionAnswer(op.id)}><Checkbox label={op.text} iconStyle={{color:"#00299f",fill:"#ffffff"}} /></div>
+								return <div key={this.state.items.id*10 + op.id} onClick={()=> this.questionAnswer(op.id)}><Checkbox label={op.text} iconStyle={{color:"#82786f",fill:"#82786f"}} /></div>
 							}) : ''
 						}	
 				</VelocityTransitionGroup>			

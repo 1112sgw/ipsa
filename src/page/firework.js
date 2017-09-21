@@ -61,7 +61,7 @@ var fireworks = function() {
     p.x = x;
     p.y = y;
     p.color = colors[anime.random(0, colors.length - 1)];
-    p.radius = anime.random(getFontSize(), getFontSize() * 2);
+    p.radius = (anime.random(getFontSize(), getFontSize() * 2)).toFixed(2);
     p.draw = function() {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);

@@ -7,9 +7,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  background: #00299f;
-  color:#fff;
+  background: #fffae7;
+  color:#82786f;
 }
+#raindrop{
+  width: 100%;
+  height: 100px;
+  position: fixed !important;
+  bottom:0;
+  z-index: 10;
+}
+
 .svg-filters {
   position: absolute;
   visibility: hidden;
@@ -21,16 +29,36 @@ body:not(.iOS) #lines * {
 }
 
 #logo {
-  width: 80%;
+  width: 70%;
   margin: 0 auto;
   display: block;
+  margin-top: 30%;
+  overflow: visible;
 }
 
 #fills * {
   opacity: 0;
   mix-blend-mode: lighten;
 }
-
+#suggest{
+  width: 60%;
+}
+#suggest *{
+  opacity: 0;
+}
+#seventeen *{
+  opacity: 0;
+}
+#beauty *{
+  opacity: 0;
+}
+#start *{
+  opacity: 0;
+}
+#start{
+  position: relative;
+  z-index: 9999
+}
 .fireworks{
   position: absolute;
   left: 0;
