@@ -9,13 +9,17 @@ html{
   background: #fffae7;
   background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#F5EAC3), to(#F9F7EB), color-stop(0.5,#FFFAE7))
 }
+
+h1,h2,h3,h4{
+  margin: 20px 0;
+}
+
 body .page{
   display: inline-block;
   height: 100vh;
   width: 100%;
   font-family: sans-serif;
   color: #82786f;
-  overflow: hidden;
   position: relative;
 }
 

@@ -6,7 +6,7 @@ export default [
   {
     id: 1,
     type: '偏油，有光泽的肌肤',
-    typeImg: 'image/congenital_skin_type_me_pic1.jpg',
+    typeImg: 'image/congenital_skin_type_me_pic1.png',
     skinImg: 'image/congenital_skin_type_me_skin3.jpg',
     skinDes: ['肌理整齐，但毛孔较明显。', '※图片是代表示例。'],
     beforeDes: [
@@ -37,7 +37,7 @@ export default [
   {
     id: 2,
     type: '水润光滑的肌肤',
-    typeImg: 'image/congenital_skin_type_me_pic2.jpg',
+    typeImg: 'image/congenital_skin_type_me_pic2.png',
     skinImg: 'image/congenital_skin_type_me_skin2.jpg',
     skinDes: ['肌理整齐，毛孔细腻。', '※图片是代表示例。'],
     beforeDes: [
@@ -68,7 +68,7 @@ export default [
   {
     id: 3,
     type: '偏油，但也干燥的肌肤',
-    typeImg: 'image/congenital_skin_type_me_pic1.jpg',
+    typeImg: 'image/congenital_skin_type_me_pic3.png',
     skinImg: 'image/congenital_skin_type_me_skin1.jpg',
     skinDes: ['肌理紊乱，且毛孔较明显。', '※图片是代表示例。'],
     beforeDes: [
@@ -98,7 +98,7 @@ export default [
   {
     id: 4,
     type: '容易干燥的肌肤',
-    typeImg: 'image/congenital_skin_type_me_pic1.jpg',
+    typeImg: 'image/congenital_skin_type_me_pic4.png',
     skinImg: 'image/congenital_skin_type_me_skin1.jpg',
     skinDes: ['肌理紊乱，但毛孔较细腻。', '※图片是代表示例。'],
     beforeDes: [
@@ -129,9 +129,7 @@ export default [
   {
     id: 5,
     type: '易受生活和环境的影响，皮脂多但容易粗糙的肌肤',
-    typeImg: 'image/congenital_skin_type_me_pic1.jpg',
-    skinImg: 'image/congenital_skin_type_me_skin1.jpg',
-    skinDes: ['キメが整っていますが、比較的毛穴が大きく目立つ肌です。', '※写真は代表例です。'],
+    typeImg: 'image/congenital_skin_type_me_pic5.png',
     beforeDes: [
       '容易受到生活节奏和环境变化的影响，皮脂较多的肌肤状态。是不是感觉肌肤又油又干?而且肌肤容易粗糙、泛油光，粉底容易脱妆?',
     ],
@@ -158,9 +156,7 @@ export default [
   {
     id: 6,
     type: '易受生活和环境的影响，容易粗糙的肌肤',
-    typeImg: 'http://www.ipsa.co.jp/smp/oc/result/img/img_oc_result_06.jpg',
-    skinImg: 'image/congenital_skin_type_me_skin1.jpg',
-    skinDes: ['キメが整っていますが、比較的毛穴が大きく目立つ肌です。', '※写真は代表例です。'],
+    typeImg: '/image/congenital_skin_type_me_pic6.png',
     beforeDes: [
       '容易受到生活节奏和环境变化的影响，皮脂较少的肌肤状态。是不是感觉随着时间和环境的变化，肌肤容易干燥?',
       '而且，干燥引起的小细纹令粉底容易卡粉，T区却容易泛油光?',

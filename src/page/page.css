@@ -1,3 +1,31 @@
+
+.logoArea{
+  width: 100%;
+  float: left;
+  margin-bottom: 15px;
+}
+#headerLogo {
+  float: left;
+  padding-right: 10px;
+}
+
+.online{
+  margin-top: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.onlineSpan{
+  font-size: 12px;
+  color: #000;
+}
+
+.main-quiz h4{
+  font-weight: normal;
+  font-size: 18px;
+}
+.main-quiz p{
+  margin-bottom: 20px;
+}
 .main-qa{
   max-width: 720px;
   margin: 0 auto;
@@ -22,7 +50,8 @@
 }
 .main-quiz{
   position: relative;
-  z-index: 9999
+  z-index: 9999;
+  min-height: 300px;
 }
 .morph {
   position: relative;
@@ -39,7 +68,7 @@
 
 .processbar {
   float: right;
-  margin-top: 26px;
+  margin-top: 10px;
 }
 .processbar span{
   display: inline-block;
@@ -57,23 +86,23 @@
 }
 
 .main-answer{
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .main-answer label{
   color:#82786f !important;
 }
-.skinImg {
-  width: 50%;
+
+.left *{
   float: left;
+  width: 100%;
 }
-.typeImg {
-  width: 50%;
-  float: left;
+
+hr{
+  width: 100%;
+  margin-top: 20px;
 }
-.skinImg img,.typeImg img{
-  width: 80%;
-}
+
 .gotoqa{
   width: 200px;
   margin: 80px auto;
@@ -107,4 +136,127 @@
   display: block;
   /* fill: #fffae7; */
   fill:#f5eac3;
+}
+.reTest{
+  position: relative;
+  float: left;
+  color: #000;
+}
+.last{
+  position: absolute;
+  bottom: 0;
+  line-height: 24px;
+  color: #000;
+}
+.reTest svg, .last svg{
+  float: left;
+}
+.gotoShop, .main-reuslt{
+  margin-top: 20px;
+}
+.shopImg{
+  margin-top: 30px;
+  width: 100%;
+}
+.shopImg img{
+  width: 100%;
+  max-width: 540px;
+}
+.shopLink a{
+  margin-top:30px;
+  width: 100px;
+  padding: 10px 25px;
+  background: #82786f;
+  color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  border-radius: 2px;
+  display: block;
+  text-align: center;
+  position: relative;
+  float: right;
+}
+.shopLink a img{
+  float:left;
+}
+
+.main-reuslt{
+  font-size: 14px;
+}
+
+.main-reuslt h3{
+  font-size: 17px;
+}
+
+.main-reuslt .title{
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-left: 4px solid #82786f;
+  margin: 20px 0;
+  width: 100%;
+}
+.main-reuslt .title span{
+  font-size: 13px;
+  display: inline-block;
+  width: auto;
+  float: none;
+}
+.skinImg {
+  width: 50%;
+  text-align: center;
+
+}
+.typeImg {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.skinImg img,.typeImg img{
+  width: 80%;
+  float:none;
+  max-width: 400px;
+}
+.skinDes{
+  width: 50%;
+}
+.skinDes h4{
+  margin: 5px 0;
+}
+.skinDes p{
+  font-size: 12px;
+}
+.beforeDes{
+  margin-top: 20px;
+}
+.notice p{
+  font-size: 12px;
+  color:#969696
+}
+.main-title{
+  font-size: 17px;
+  font-weight: bold;
+}
+.product img{
+  max-width: 250px;
+}
+.pro_title{
+  padding-left: 60px;
+  text-decoration: underline;
+}
+@media all and (max-width: 480px) {
+  .product img{
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+    float: none;
+  }
+  .pro_title{
+    width: 250px;
+    padding-left: 0;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    float: none;
+
+  }
 }

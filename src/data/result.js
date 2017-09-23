@@ -2,7 +2,7 @@ export default [
   {
     id: 1,
     type: '皮脂が多く、ツヤのある肌',
-    typeImg: '/image/congenital_skin_type_me_pic1.jpg',
+    typeImg: '/image/congenital_skin_type_me_pic1.png',
     skinImg: '/image/congenital_skin_type_me_skin3.jpg',
     skinDes: ['キメが整っていますが、比較的毛穴が大きく目立つ肌です。', '※写真は代表例です。'],
     beforeDes: [
@@ -33,7 +33,7 @@ export default [
   {
     id: 2,
     type: 'みずみずしくなめらかな肌',
-    typeImg: '/image/congenital_skin_type_me_pic2.jpg',
+    typeImg: '/image/congenital_skin_type_me_pic2.png',
     skinImg: '/image/congenital_skin_type_me_skin2.jpg',
     skinDes: ['キメが細かく整い、比較的毛穴が小さめの肌です。', '※写真は代表例です。'],
     beforeDes: [
@@ -64,7 +64,7 @@ export default [
   {
     id: 3,
     type: '皮脂が多いのに、カサつきやすい肌',
-    typeImg: '/image/congenital_skin_type_me_pic1.jpg',
+    typeImg: '/image/congenital_skin_type_me_pic1.png',
     skinImg: '/image/congenital_skin_type_me_skin1.jpg',
     skinDes: ['キメが乱れがちで、比較的毛穴が大きめの肌です。', '※写真は代表例です。'],
     beforeDes: [
@@ -94,7 +94,7 @@ export default [
   {
     id: 4,
     type: 'カサつきやすい肌',
-    typeImg: '/image/congenital_skin_type_me_pic1.jpg',
+    typeImg: '/image/congenital_skin_type_me_pic1.png',
     skinImg: '/image/congenital_skin_type_me_skin1.jpg',
     skinDes: ['キメが乱れがちで、比較的毛穴が小さめの肌です。', '※写真は代表例です。'],
     beforeDes: [
@@ -125,9 +125,7 @@ export default [
   {
     id: 5,
     type: '生活や環境の影響を受けやすく、皮脂が多いのにカサつきやすい肌',
-    typeImg: '/image/congenital_skin_type_me_pic1.jpg',
-    skinImg: '/image/congenital_skin_type_me_skin1.jpg',
-    skinDes: ['キメが整っていますが、比較的毛穴が大きく目立つ肌です。', '※写真は代表例です。'],
+    typeImg: '/image/congenital_skin_type_me_pic5.png',
     beforeDes: [
       '生活リズムや環境の変化によって肌が影響を受けやすく、皮脂が多めの肌です。脂っぽいのと同時に、乾燥が気になりやすいのではないでしょうか?また、ザラついたり、テカりやすく、ファンデーションが崩れやすいといったことはありませんか?',
     ],
@@ -154,9 +152,7 @@ export default [
   {
     id: 6,
     type: '生活や環境の影響を受けやすく、カサつきやすい肌',
-    typeImg: '/image/congenital_skin_type_me_pic1.jpg',
-    skinImg: '/image/congenital_skin_type_me_skin1.jpg',
-    skinDes: ['キメが整っていますが、比較的毛穴が大きく目立つ肌です。', '※写真は代表例です。'],
+    typeImg: '/image/congenital_skin_type_me_pic6.png',
     beforeDes: [
       '生活リズムや環境の変化によって肌が影響を受けやすく、皮脂は少ない状態です。時間の経過による乾燥が気になりやすいのではないでしょうか?',
       'また、乾燥による小ジワでファンデーションがフィットしない、Tゾーンのみ脂っぽいといったことはないでしょうか?',

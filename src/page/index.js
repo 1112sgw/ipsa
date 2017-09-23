@@ -33,8 +33,7 @@ class MainPage extends Component {
 
   render() {
     return (    
-     <div className="page">
-        
+     <div className="page" style={{overflow:'hidden'}}>  
        {
          this.changeStatus()
        }

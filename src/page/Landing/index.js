@@ -143,7 +143,7 @@ class Landing extends Component {
         value:1,
         duration:100,
         delay:(element, index) => {
-          return 100 + 100 * index;
+          return 100 + 60 * index;
         },
       },
       offset:9000,
@@ -153,7 +153,7 @@ class Landing extends Component {
       opacity: 0.9,
       backgroundColor: '#82786f',
       duration:4000,
-      offset:13000
+      offset:11000
     })
   } 
 
