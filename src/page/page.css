@@ -16,7 +16,6 @@
 }
 .onlineSpan{
   font-size: 12px;
-  color: #000;
 }
 
 .main-quiz h4{
@@ -140,13 +139,11 @@ hr{
 .reTest{
   position: relative;
   float: left;
-  color: #000;
 }
 .last{
   position: absolute;
   bottom: 0;
   line-height: 24px;
-  color: #000;
 }
 .reTest svg, .last svg{
   float: left;
