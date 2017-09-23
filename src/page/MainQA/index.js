@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
+import 'velocity-animate';
+import 'velocity-animate/velocity.ui';
 import anime from 'animejs'
+import {VelocityTransitionGroup, velocityHelpers, VelocityComponent} from 'velocity-react';
 import logo from '../logo.svg';
 import qalist from '../../data/questionCN.js';
 import resultlist from '../../data/resultCN.js';
@@ -15,9 +18,11 @@ class MainQA extends Component {
   state = {
     status: 'question',
     resultId: 1,
+    isIn:true,
+    first:true,
     productType: 0,
     productNum: 0,
-    num: 0,
+    num: 1,
     pos: 0,
     DOM: {},
   }
@@ -25,7 +30,16 @@ class MainQA extends Component {
   handleQuestion = (an) => {
     let id = 1;
     let numold = this.state.num;
-
+    if (!this.state.first) {
+      this.setState({isIn: !this.state.isIn});
+      setTimeout(() => {
+        this.setState({
+          isIn: !this.state.isIn,
+          num: numold + 1
+        });
+      }, 1000);
+    }
+    this.setState({first: false});
     //handle result
     if (an.length > 0) {
 
@@ -40,7 +54,6 @@ class MainQA extends Component {
           case 3:
             this.setState({ productType: 2 });
             break;
-          case 3:
           case 4:
           case 5:
             this.setState({ productType: 3 });
@@ -251,12 +264,6 @@ class MainQA extends Component {
     }
     this.setState({ pos: oldpos + 1 }, () => this.initShapeEl(this.state.DOM))
     //handle background
-
-    setTimeout(() => {
-      this.setState({ num: numold + 1 });
-    }, 500);
-
-
     return _.find(qalist, (qa) => {
       return qa.id === id;
     })
@@ -392,6 +399,8 @@ class MainQA extends Component {
   };
 
   render() {
+    var animation = this.state.isIn ? 'transition.expandIn' : 'transition.expandOut';
+    let duration = this.state.isIn ? 500 : 500;
     return (
       <div className="main-qa">
         <div className="background" dangerouslySetInnerHTML={{
@@ -400,7 +409,7 @@ class MainQA extends Component {
 					  <path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
 				  </svg>`}} />
         <div className="header">
-          <h1>ONLINE COUNSELING</h1>
+          <h2>ONLINE COUNSELING</h2>
           <div className="processbar">
             {
               <div dangerouslySetInnerHTML={{ __html: this.handleProcessBar() }} />
@@ -408,7 +417,10 @@ class MainQA extends Component {
           </div>
         </div>
         <hr />
-        {this.theMainStage()}
+        <VelocityComponent key='slideLeftBig' animation={animation} duration={duration}>    
+          {this.theMainStage()}
+        </VelocityComponent>
+        {/* {this.theMainStage()} */}
       </div>
     );
   }

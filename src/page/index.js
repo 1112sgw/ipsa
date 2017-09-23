@@ -30,9 +30,11 @@ class MainPage extends Component {
   render() {
     return (    
      <div>
-       {
+       {/* {
+          
          this.changeStatus()
-       }
+       } */}
+       <MainQA />
      </div>
     );
   }

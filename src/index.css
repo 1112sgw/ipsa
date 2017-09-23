@@ -1,6 +1,6 @@
 *{
-  /* opacity: 1; */
-  -webkit-backface-visibility: hidden;
+   opacity: 1; 
+  -webkit-backface-visibility: hidden; 
 }
 
 body {

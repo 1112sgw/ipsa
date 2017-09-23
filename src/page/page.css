@@ -43,7 +43,7 @@
   display: inline-block;
   margin-right: 1px;
   width: 16px;
-  background: #ddd;
+  background: #D0D0D0;
   text-indent: 100%;
   vertical-align: top;
   white-space: nowrap;
@@ -51,7 +51,7 @@
   height: 5px;
 }
 .processbar .solid{
-  background: #00299f;
+  background: #82786f;
 }
 
 .main-answer{
@@ -60,9 +60,6 @@
 
 .main-answer label{
   color:#82786f !important;
-  font-weight: bold;
-  position: relative;
-  z-index: 999;
 }
 .skinImg {
   width: 50%;
@@ -72,7 +69,9 @@
   width: 50%;
   float: left;
 }
-
+.skinImg img,.typeImg img{
+  width: 80%;
+}
 .gotoqa{
   width: 200px;
   margin: 50px auto;
