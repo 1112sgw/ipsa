@@ -56,6 +56,7 @@ class MainQA extends Component {
             break;
           case 4:
           case 5:
+          case 5:
             this.setState({ productType: 3 });
             break;
           default:
@@ -337,13 +338,18 @@ class MainQA extends Component {
   };
 
   theMainStage = () => {
+    console.log(this.state.productType, this.state.productNum)
     if (this.state.status === "question") {
-      return <Question question={(an) => this.handleQuestion(an)} num={this.state.num} />
+      return <Question question={(an) => this.handleQuestion(an)} num={this.state.num} ref='reStartTest'  />
     }
     else {
       return <Result result={() => this.handleResult()} product={() => this.handleProduct()} />
     }
   };
+
+  backToLastQuestion = () => {
+    this.refs.reStartTest.restart();
+  }
 
   handleProcessBar = () => {
     let bar = `<span class="solid"></span>`;
@@ -415,6 +421,7 @@ class MainQA extends Component {
               <div dangerouslySetInnerHTML={{ __html: this.handleProcessBar() }} />
             }
           </div>
+          <RaisedButton label="重新测试" onClick = {this.backToLastQuestion} />
         </div>
         <hr />
         <VelocityComponent key='slideLeftBig' animation={animation} duration={duration}>    
