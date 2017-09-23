@@ -10,7 +10,8 @@ import resultlist from '../../data/resultCN.js';
 import productlist from '../../data/productCN.js';
 import Question from './Question';
 import Result from './Result';
-import shapes from '../../data/shape.js'
+import shapes from '../../data/shape.js';
+import {RaisedButton} from 'material-ui';
 
 
 class MainQA extends Component {
@@ -22,20 +23,19 @@ class MainQA extends Component {
     first:true,
     productType: 0,
     productNum: 0,
-    num: 1,
     pos: 0,
     DOM: {},
   }
 
   handleQuestion = (an) => {
     let id = 1;
-    let numold = this.state.num;
+   // let numold = this.state.num;
     if (!this.state.first) {
       this.setState({isIn: !this.state.isIn});
       setTimeout(() => {
         this.setState({
           isIn: !this.state.isIn,
-          num: numold + 1
+        //  num: numold + 1
         });
       }, 1000);
     }
@@ -128,28 +128,30 @@ class MainQA extends Component {
         id = 81;
       }
       if (lastid === 8) {
-        var anOfQ7 = this.findAnByQuestionId(an, 7);
-        if (this.findAnByQuestionId(an, 8) === 1) {
-          switch (anOfQ7) {
-            case 1:
-              this.setState({ productNum: 4 });
-              break;
-            case 2:
-              this.setState({ productNum: 3 });
-              break;
-            default:
-              break;
-          }
-        } else {
-          switch (anOfQ7) {
-            case 1:
-              this.setState({ productNum: 2 });
-              break;
-            case 2:
-              this.setState({ productNum: 1 });
-              break;
-            default:
-              break;
+        if (this.state.productType !== 4) {
+          var anOfQ7 = this.findAnByQuestionId(an, 7);
+          if (this.findAnByQuestionId(an, 8) === 1) {
+            switch (anOfQ7) {
+              case 1:
+                this.setState({ productNum: 4 });
+                break;
+              case 2:
+                this.setState({ productNum: 3 });
+                break;
+              default:
+                break;
+            }
+          } else {
+            switch (anOfQ7) {
+              case 1:
+                this.setState({ productNum: 2 });
+                break;
+              case 2:
+                this.setState({ productNum: 1 });
+                break;
+              default:
+                break;
+            }
           }
         }
       }
@@ -335,9 +337,7 @@ class MainQA extends Component {
   };
 
   theMainStage = () => {
-
     if (this.state.status === "question") {
-      console.log("productType:"+this.state.productType,"productNum:"+this.state.productNum);
       return <Question question={(an) => this.handleQuestion(an)} num={this.state.num} />
     }
     else {
@@ -419,7 +419,9 @@ class MainQA extends Component {
         <hr />
         <VelocityComponent key='slideLeftBig' animation={animation} duration={duration}>    
           {this.theMainStage()}
+         
         </VelocityComponent>
+       
         {/* {this.theMainStage()} */}
       </div>
     );
