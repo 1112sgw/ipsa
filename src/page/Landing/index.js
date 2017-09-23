@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import anime from 'animejs'
-var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-if (iOS) document.body.classList.add('iOS');
+
 class Landing extends Component {
 
   constructor(props) {
@@ -13,7 +12,7 @@ class Landing extends Component {
   gotoQA = ()=>{
       setTimeout(()=> {
         this.props.startQA(true)
-      },500)
+      },1100)
       this.navigate()
     }
   navigate = ()=> {
@@ -159,6 +158,8 @@ class Landing extends Component {
   } 
 
   componentDidMount() {
+    var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+    if (iOS) document.body.classList.add('iOS');
     this.gradients();
   }
 

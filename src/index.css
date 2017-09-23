@@ -51,7 +51,6 @@ body:not(.iOS) #lines * {
 
 #fills * {
   opacity: 0;
-  mix-blend-mode: lighten;
 }
 #suggest{
   width: 60%;
