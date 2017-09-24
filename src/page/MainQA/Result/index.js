@@ -91,12 +91,12 @@ class Result extends Component {
 					<div className="title">推荐这款产品：</div>
 					<div className="product">
 						<a href={this.props.product().link}>
-							<div className="pro_title">{this.props.product().name} 》</div>
+							<div className="pro_title">{this.props.product().name}</div>
 							<img src={this.props.product().url} />
 						</a>						
 					</div>
 					<div className="notice">
-						<h4>重新进行肌肤咨询</h4>
+						<h4></h4>
 						{
 							this.props.result().notice.map((d)=> {
 								return <p key={d}>{d}</p>
