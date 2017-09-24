@@ -35,7 +35,6 @@ class Question extends Component {
 
 
 	componentDidMount() {
-
 		this.setState({ items: this.props.question(this.state.answers) });
 	}
 

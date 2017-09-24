@@ -25,26 +25,30 @@ class MainQA extends Component {
     productNum: 0,
     pos: 0,
     DOM: {},
+    processId: 0,
+    processTotle: 13
   }
 
   handleQuestion = (an) => {
     let id = 1;
-   // let numold = this.state.num;
+    let processId = 0;
+    let processTotle = 13;
     if (!this.state.first) {
       this.setState({isIn: !this.state.isIn});
       setTimeout(() => {
         this.setState({
           isIn: !this.state.isIn,
-        //  num: numold + 1
         });
       }, 1000);
     }
     this.setState({first: false});
-    //handle result
     if (an.length > 0) {
 
       let lastid = _.last(an).q;
       id = lastid + 1;
+      processId = this.state.processId + 1;
+      processTotle  = this.state.processTotle;
+
       if (lastid === 1) {
         switch (this.findAnByQuestionId(an, 1)) {
           case 1:
@@ -194,12 +198,14 @@ class MainQA extends Component {
           case 5:
           case 6:
             id = 11;
+            processTotle--;
             if (this.state.productType === 1) {
               this.setState({ productType: 2 });
             }
             break;
           default:
             id = 11;
+            processTotle--;
             break;
         }
       }
@@ -230,6 +236,7 @@ class MainQA extends Component {
       if (lastid === 11) {
         if (this.findAnByQuestionId(an, 11) === 3) {
           id = 111;
+          processTotle++;
         }
       }
       if (lastid === 111) {
@@ -265,7 +272,7 @@ class MainQA extends Component {
     if (oldpos === 5) {
       oldpos = -1;
     }
-    this.setState({ pos: oldpos + 1 }, () => this.initShapeEl(this.state.DOM))
+    this.setState({ pos: oldpos + 1, processId: processId, processTotle: processTotle }, () => this.initShapeEl(this.state.DOM))
     //handle background
     return _.find(qalist, (qa) => {
       return qa.id === id;
@@ -348,19 +355,27 @@ class MainQA extends Component {
   };
 
   backToLastQuestion = () => {
-    this.refs.reStartTest.restart();
+    if(this.state.status === "finished"){
+      this.setState({status: "question"});
+    }else{
+      this.refs.reStartTest.restart();
+    }
   }
 
   handleProcessBar = () => {
-    let bar = `<span class="solid"></span>`;
-    for (let x = 1; x < this.state.num; x++) {
-      bar = bar + `<span class="solid"></span>`
+    if(this.state.status === "question") {
+      let bar = `<span class="solid"></span>`;
+      for (let x = 0; x < this.state.processId; x++) {
+        bar = bar + `<span class="solid"></span>`
+      }
+      for (let i = this.state.processId+1; i < this.state.processTotle; i++) {
+        bar = bar + `<span class="empty"></span>`
+      }
+      return bar;
+    }else{
+      return "";
     }
 
-    for (let i = this.state.num; i < 13; i++) {
-      bar = bar + `<span class="empty"></span>`
-    }
-    return bar;
   };
 
   initShapeLoop = (pos, DOM) => {
