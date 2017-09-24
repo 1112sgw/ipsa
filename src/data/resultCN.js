@@ -156,7 +156,7 @@ export default [
   {
     id: 6,
     type: '易受生活和环境的影响，容易粗糙的肌肤',
-    typeImg: '/image/congenital_skin_type_me_pic6.png',
+    typeImg: 'image/congenital_skin_type_me_pic6.png',
     beforeDes: [
       '容易受到生活节奏和环境变化的影响，皮脂较少的肌肤状态。是不是感觉随着时间和环境的变化，肌肤容易干燥?',
       '而且，干燥引起的小细纹令粉底容易卡粉，T区却容易泛油光?',
