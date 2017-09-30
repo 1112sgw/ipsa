@@ -92,7 +92,7 @@ class Result extends Component {
 					<div className="product">
 						<a href={this.props.product().link}>
 							<div className="pro_title">{this.props.product().name}</div>
-							<img src={this.props.product().url} />
+							<img src={this.props.product().url} alt=""/>
 						</a>						
 					</div>
 					<div className="notice">

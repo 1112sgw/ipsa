@@ -2,7 +2,7 @@
   "name": "ipsa_skin",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jgreen-cn.xyz/ipsa",
+  "homepage": "https://ipsatest.herokuapp.com",
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

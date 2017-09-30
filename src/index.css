@@ -5,9 +5,8 @@
   padding: 0;
 }
 html{
-  height: 100%;
   background: #fffae7;
-  background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#F5EAC3), to(#F9F7EB), color-stop(0.5,#FFFAE7))
+  /* background: -webkit-gradient(linear,0% 0%, 0% 100%, from(#fffae7), to(#fffdf7), color-stop(0.5,#fffdfa)) */
 }
 
 h1,h2,h3,h4{
@@ -65,7 +64,10 @@ body:not(.iOS) #lines * {
 #suggest *{
   opacity: 0;
 }
-#seventeen *{
+#firstTwo *{
+  opacity: 0;
+}
+#endTwo *{
   opacity: 0;
 }
 #beauty *{

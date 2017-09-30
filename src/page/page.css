@@ -50,7 +50,7 @@
 .main-quiz{
   position: relative;
   z-index: 9999;
-  min-height: 300px;
+  min-height: 340px;
 }
 .morph {
   position: relative;
@@ -63,6 +63,7 @@
   float: left;
   width: 100%;
   min-height: 80px;
+  position: relative;
 }
 
 .processbar {
@@ -137,13 +138,17 @@ hr{
   fill:#f5eac3;
 }
 .reTest{
-  position: relative;
-  float: left;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+  
 }
 .last{
   position: absolute;
   bottom: 0;
   line-height: 24px;
+  cursor: pointer;
 }
 .reTest svg, .last svg{
   float: left;
@@ -240,6 +245,14 @@ hr{
   padding-left: 60px;
   text-decoration: underline;
 }
+.checkOption{
+  padding: 4px;
+}
+.checkOption label{
+  line-height: 22px !important;
+}
+
+
 @media all and (max-width: 480px) {
   .product img{
     width: 250px;

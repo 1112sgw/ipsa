@@ -338,16 +338,14 @@ class MainQA extends Component {
   };
 
   handleProduct = () => {
-
     let product = _.result(_.find(productlist, { 'id': this.state.productType }), 'option');
     return _.find(product, { 'id': this.state.productNum });
 
   };
 
   theMainStage = () => {
-    console.log(this.state.productType, this.state.productNum)
     if (this.state.status === "question") {
-      return <Question question={(an) => this.handleQuestion(an)} num={this.state.num} ref='reStartTest'  />
+      return <Question question={(an) => this.handleQuestion(an)} num={this.state.num} handleProcess={()=> this.updateProcessId()} ref='reStartTest'  />
     }
     else {
       return <Result result={() => this.handleResult()} product={() => this.handleProduct()} />
@@ -356,19 +354,25 @@ class MainQA extends Component {
 
   backToLastQuestion = () => {
     if(this.state.status === "finished"){
-      this.setState({status: "question"});
+      this.setState({status: "question"})
     }else{
       this.refs.reStartTest.restart();
     }
   }
 
+  updateProcessId = () =>{
+    var oldprocess = this.state.processId - 1;
+    this.setState({processId:  oldprocess})
+  }
+
   handleProcessBar = () => {
+    console.log(this.state.status)
     if(this.state.status === "question") {
       let bar = `<span class="solid"></span>`;
       for (let x = 0; x < this.state.processId; x++) {
         bar = bar + `<span class="solid"></span>`
       }
-      for (let i = this.state.processId+1; i < this.state.processTotle; i++) {
+      for (let i = this.state.processId + 1; i < this.state.processTotle; i++) {
         bar = bar + `<span class="empty"></span>`
       }
       return bar;
@@ -412,11 +416,11 @@ class MainQA extends Component {
   };
 
   componentDidMount() {
-    const DOM = {};
-    DOM.svg = document.querySelector('.morph');
-    DOM.shapeEl = DOM.svg.querySelector('path');
-    this.setState({ pos: 0, DOM: DOM })
-    this.initShapeEl(this.state.DOM)
+    // const DOM = {};
+    // DOM.svg = document.querySelector('.morph');
+    // DOM.shapeEl = DOM.svg.querySelector('path');
+    // this.setState({ pos: 0, DOM: DOM })
+    // this.initShapeEl(this.state.DOM)
   };
 
   render() {
@@ -424,11 +428,11 @@ class MainQA extends Component {
     let duration = this.state.isIn ? 500 : 500;
     return (
       <div className="main-qa">
-        <div className="background" dangerouslySetInnerHTML={{
+        {/* <div className="background" dangerouslySetInnerHTML={{
           __html:
           `<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
 					  <path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
-				  </svg>`}} />
+				  </svg>`}} /> */}
         <div className="header">
          <div className="logoArea">
             <svg version="1.1" width="60px" height="60px" viewBox="0 0 24 24" fill="#000000" id="headerLogo">

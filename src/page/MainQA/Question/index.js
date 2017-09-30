@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
-import { Checkbox, RaisedButton } from 'material-ui';
+import { Checkbox } from 'material-ui';
 import qalist from '../../../data/questionCN.js';
 
 class Question extends Component {
@@ -54,7 +54,7 @@ class Question extends Component {
 				return qa.id === lastid;
 			});
 			this.setState({ items: lastQuestion });
-			console.log(this.state.answers);
+			this.props.handleProcess();
 		}
 	}
 
@@ -69,7 +69,7 @@ class Question extends Component {
 				<div className="main-answer">
 					{
 						this.state.items !== '' ? this.state.items.option.map((op) => {
-							return <Checkbox label={op.text} iconStyle={{ color: "#82786f", fill: "#82786f" }} onClick={(e) => this.questionAnswer(op.id, e)} key={this.state.items.id * 10 + op.id} />
+							return <Checkbox className="checkOption" label={op.text} iconStyle={{ color: "#82786f", fill: "#82786f" }} onClick={(e) => this.questionAnswer(op.id, e)} key={this.state.items.id * 10 + op.id} />
 						}) : ''
 					}
 				</div>
