@@ -8,7 +8,9 @@
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.12",
     "velocity-react": "^1.3.3",
-    "velocity-animate":"^1.5.0"
+    "velocity-animate":"^1.5.0",
+    "material-ui": "^0.19.1",
+    "animejs": "^2.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
