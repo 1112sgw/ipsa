@@ -49,7 +49,7 @@ body:not(.iOS) #lines * {
   margin: 0 auto;
   display: block;
   overflow: visible;
-  max-width: 375px
+  max-width: 375px;
 }
 
 #fills * {
